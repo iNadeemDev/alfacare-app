@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "733520155603",
+    "project_id": "alfacareapp",
+    "storage_bucket": "alfacareapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733520155603:android:eb1263ddfa0971f4c5d526",
+        "android_client_info": {
+          "package_name": "com.example.alfacare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733520155603-ihq8p00ug7mga3ndttnr1er4nqlrbfm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alfacare",
+            "certificate_hash": "7594726839fdbb887fbe6b8b45ae6c7ce9ab5bba"
+          }
+        },
+        {
+          "client_id": "733520155603-3cd6tqhpt5tkv5ohlp91qo277nc6e0r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAziLC7F6_FCu-O-cYE4NUIJHrLjefD9Mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733520155603-3cd6tqhpt5tkv5ohlp91qo277nc6e0r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
