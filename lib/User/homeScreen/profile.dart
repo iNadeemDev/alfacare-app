@@ -1,5 +1,6 @@
 //import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:alfacare/User/homeScreen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'userAppBar.dart';
 
@@ -179,6 +180,13 @@ class _ProfileState extends State<Profile> {
 
     return Scaffold(
       appBar:AppBar(
+        leading: InkWell(
+          child: Icon(Icons.arrow_back),
+          onTap: (){
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
+        ),
         title: const Text('Edit Your Profile'),
         centerTitle: true,
         backgroundColor: Colors.purple[900],

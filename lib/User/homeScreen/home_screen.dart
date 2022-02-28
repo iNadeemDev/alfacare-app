@@ -1,3 +1,4 @@
+import 'package:alfacare/User/doctors/specialities.dart';
 import 'package:alfacare/User/homeScreen/card.dart';
 import 'package:alfacare/User/homeScreen/carousel.dart';
 import 'package:alfacare/User/homeScreen/drawer.dart';
@@ -45,53 +46,207 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 3.h,
                   ),
-                  Padding(
+                  Container(
                     padding: EdgeInsets.only(left: 5.w, right: 5.w),
                     child: Row(
-                      children: const [
-                        MultipleSelectionCard(
-                          icon: FontAwesomeIcons.flask,
-                          textWid: 'Online',
-                          textsWid: 'Lab test',
-                          iconsWid: FontAwesomeIcons.arrowRight,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Specialities()));
+                          },
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.white,
+                            ),
+                            child:Column(
+                              children: [
+                                Icon(FontAwesomeIcons.flask),
+                                SizedBox(height:5),
+                                Text(
+                                    'Home',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                    'Hospital',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 19,
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Icon(FontAwesomeIcons.arrowRight),
+                              ],
+                            )
+                          ),
                         ),
-                        MultipleSelectionCard(
-                          icon: FontAwesomeIcons.prescriptionBottle,
-                          textWid: 'Online',
-                          textsWid: 'Pharmacy',
-                          iconsWid: FontAwesomeIcons.arrowRight,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Specialities()));
+                          },
+                          child: Container(
+                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                color: Colors.white,
+                              ),
+                              child:Column(
+                                children: [
+                                  Icon(FontAwesomeIcons.flask),
+                                  SizedBox(height:5),
+                                  Text(
+                                    'Online',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Lab Test',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 19,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Icon(FontAwesomeIcons.arrowRight),
+                                ],
+                              )
+                          ),
                         ),
+                        // MultipleSelectionCard(
+                        //   icon: FontAwesomeIcons.flask,
+                        //   textWid: 'Online',
+                        //   textsWid: 'Lab test',
+                        //   iconsWid: FontAwesomeIcons.arrowRight,
+                        // ),
+                        // MultipleSelectionCard(
+                        //   icon: FontAwesomeIcons.prescriptionBottle,
+                        //   textWid: 'Online',
+                        //   textsWid: 'Pharmacy',
+                        //   iconsWid: FontAwesomeIcons.arrowRight,
+                        // ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 0.75.h,
+                    height: 12,
                   ),
-                  Padding(
+
+
+
+                  Container(
                     padding: EdgeInsets.only(left: 5.w, right: 5.w),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         GestureDetector(
                           onTap: (){
-                            Navigator.pushReplacement(context,
-                                MaterialPageRoute(builder: (context) => City()));
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Specialities()));
                           },
-                          child: MultipleSelectionCard(
-                            icon: FontAwesomeIcons.hospitalUser,
-                            textWid: 'Home Hospital',
-                            textsWid: 'Services',
-                            iconsWid: FontAwesomeIcons.arrowRight,
+                          child: Container(
+                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Colors.white,
+                              ),
+                              child:Column(
+                                children: [
+                                  Icon(FontAwesomeIcons.flask),
+                                  SizedBox(height:5),
+                                  Text(
+                                    'Online',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Lab Test',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 19,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Icon(FontAwesomeIcons.arrowRight),
+                                ],
+                              )
                           ),
                         ),
-                        MultipleSelectionCard(
-                          icon: FontAwesomeIcons.mobile,
-                          textsWid: 'On Call',
-                          textWid: 'Doctor',
-                          iconsWid: FontAwesomeIcons.arrowRight,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Specialities()));
+                          },
+                          child: Container(
+                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Colors.white,
+                              ),
+                              child:Column(
+                                children: [
+                                  Icon(FontAwesomeIcons.flask),
+                                  SizedBox(height:5),
+                                  Text(
+                                    'Online',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Lab Test',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 19,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Icon(FontAwesomeIcons.arrowRight),
+                                ],
+                              )
+                          ),
                         ),
+                        // MultipleSelectionCard(
+                        //   icon: FontAwesomeIcons.flask,
+                        //   textWid: 'Online',
+                        //   textsWid: 'Lab test',
+                        //   iconsWid: FontAwesomeIcons.arrowRight,
+                        // ),
+                        // MultipleSelectionCard(
+                        //   icon: FontAwesomeIcons.prescriptionBottle,
+                        //   textWid: 'Online',
+                        //   textsWid: 'Pharmacy',
+                        //   iconsWid: FontAwesomeIcons.arrowRight,
+                        // ),
                       ],
                     ),
                   ),
+                  // Padding(
+                  //   padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                  //   child: Row(
+                  //     children: [
+                  //       MultipleSelectionCard(
+                  //         icon: FontAwesomeIcons.hospitalUser,
+                  //         textWid: 'Home Hospital',
+                  //         textsWid: 'Services',
+                  //         iconsWid: FontAwesomeIcons.arrowRight,
+                  //       ),
+                  //       MultipleSelectionCard(
+                  //         icon: FontAwesomeIcons.mobile,
+                  //         textsWid: 'On Call',
+                  //         textWid: 'Doctor',
+                  //         iconsWid: FontAwesomeIcons.arrowRight,
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   Padding(
                     padding: EdgeInsets.only(
                       left: 3.w,

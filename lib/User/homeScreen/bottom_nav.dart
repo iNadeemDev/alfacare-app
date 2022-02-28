@@ -1,3 +1,4 @@
+import 'package:alfacare/User/homeScreen/profile.dart';
 import 'package:flutter/material.dart';
 import 'fourth_class.dart';
 import '../doctors/doctor.dart';
@@ -42,9 +43,9 @@ class NavBar extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       const HomeScreen(),
-      const DoctorProfile(),
       const ThirdClass(),
       const FourthClass(),
+      const Profile(),
     ];
   }
 
