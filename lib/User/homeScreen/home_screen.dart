@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: (){
-                            Navigator.pushReplacement(context,
+                            Navigator.push(context,
                                 MaterialPageRoute(builder: (context) => City()));
                           },
                           child: MultipleSelectionCard(
@@ -84,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         MultipleSelectionCard(
+
                           icon: FontAwesomeIcons.mobile,
                           textsWid: 'On Call',
                           textWid: 'Doctor',
