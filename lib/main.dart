@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Alfacare',
+      title: 'Alfacare Health System',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
