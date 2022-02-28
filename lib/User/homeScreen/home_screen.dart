@@ -1,6 +1,7 @@
 import 'package:alfacare/User/homeScreen/card.dart';
 import 'package:alfacare/User/homeScreen/carousel.dart';
 import 'package:alfacare/User/homeScreen/drawer.dart';
+import 'package:alfacare/User/hospital_services/city.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sizer/sizer.dart';
@@ -69,12 +70,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.only(left: 5.w, right: 5.w),
                     child: Row(
-                      children: const [
-                        MultipleSelectionCard(
-                          icon: FontAwesomeIcons.hospitalUser,
-                          textWid: 'Home Hospital',
-                          textsWid: 'Services',
-                          iconsWid: FontAwesomeIcons.arrowRight,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (context) => City()));
+                          },
+                          child: MultipleSelectionCard(
+                            icon: FontAwesomeIcons.hospitalUser,
+                            textWid: 'Home Hospital',
+                            textsWid: 'Services',
+                            iconsWid: FontAwesomeIcons.arrowRight,
+                          ),
                         ),
                         MultipleSelectionCard(
                           icon: FontAwesomeIcons.mobile,
