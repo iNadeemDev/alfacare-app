@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'medical_services.dart';
+
 class City extends StatefulWidget {
   const City({Key? key}) : super(key: key);
 
@@ -48,8 +50,7 @@ class _CityState extends State<City> {
         padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
         //minWidth: MediaQuery.of(context).size.width,
         onPressed: () {
-          //signIn(emailController.text, passwordController.text);
-
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const MedicalServices()));
         },
         child: const Text(
           'Get Started',
@@ -127,6 +128,11 @@ class _CityState extends State<City> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: const Icon(Icons.add_call,size: 20,),
+          backgroundColor: Colors.purple.shade900,
+          ),
     );
   }
 }
