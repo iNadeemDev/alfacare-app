@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -20,7 +21,93 @@ class _SignUpState extends State<SignUp> {
 
   final TextEditingController passwordController = TextEditingController();
 
+  final TextEditingController cpasswordController = TextEditingController();
+
   final GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+// to destroy the controller after use
+//   @override
+  // void dispose() {
+  //   // Clean up the controller when the widget is disposed.
+  //   nameController.dispose();
+  //   emailController.dispose();
+  //   phoneController.dispose();
+  //   genderController.dispose();
+  //   passwordController.dispose();
+  //   super.dispose();
+  // }
+
+
+
+// to register user into firebase
+  registration() async {
+
+    final name = nameController.text;
+    final email = emailController.text;
+    final phone = phoneController.text;
+    final gender = genderController.text;
+    final String password = passwordController.text;
+    final String cpassword = cpasswordController.text;
+
+    if (password == cpassword) {
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
+        print(userCredential);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.redAccent,
+            content: Text(
+              "Registered Successfully. Please Login..",
+              style: TextStyle(fontSize: 20.0),
+            ),
+          ),
+        );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Login(),
+          ),
+        );
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          print("Password Provided is too Weak");
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              backgroundColor: Colors.orangeAccent,
+              content: Text(
+                "Password Provided is too Weak",
+                style: TextStyle(fontSize: 18.0, color: Colors.black),
+              ),
+            ),
+          );
+        } else if (e.code == 'email-already-in-use') {
+          print("Account Already exists");
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              backgroundColor: Colors.orangeAccent,
+              content: Text(
+                "Account Already exists",
+                style: TextStyle(fontSize: 18.0, color: Colors.black),
+              ),
+            ),
+          );
+        }
+      }
+    } else {
+      print("Password and Confirm Password doesn't match");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.orangeAccent,
+          content: Text(
+            "Password and Confirm Password doesn't match",
+            style: TextStyle(fontSize: 16.0, color: Colors.black),
+          ),
+        ),
+      );
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +230,36 @@ class _SignUpState extends State<SignUp> {
         return null;
       },
       onSaved: (value) {
-        phoneController.text = value!;
+        passwordController.text = value!;
+      },
+      textInputAction: TextInputAction.next,
+      decoration: const InputDecoration(
+          contentPadding: EdgeInsets.only(bottom: 10),
+          suffixIcon: Icon(
+            Icons.lock,
+            size: 25,
+            color: Colors.pink,
+          ),
+          labelText: 'Password',
+          labelStyle: TextStyle(
+            color: Colors.black,
+          )),
+    );
+
+
+    final cpasswordField = TextFormField(
+      autofocus: false,
+      controller: cpasswordController,
+      obscureText: true,
+      keyboardType: TextInputType.visiblePassword,
+      validator: (String? value) {
+        if (value == null || value.isEmpty) {
+          return 'please Enter password';
+        }
+        return null;
+      },
+      onSaved: (value) {
+        cpasswordController.text = value!;
       },
       textInputAction: TextInputAction.next,
       decoration: const InputDecoration(
@@ -169,6 +285,8 @@ class _SignUpState extends State<SignUp> {
         onPressed: () {
           if (formkey.currentState!.validate()) {
             formkey.currentState!.save();
+
+          registration();
           }
         },
         child: const Text(
@@ -223,6 +341,11 @@ class _SignUpState extends State<SignUp> {
                     const SizedBox(
                       height: 50,
                     ),
+                    cpasswordField,
+                    const SizedBox(
+                      height: 50,
+                    ),
+
                     signUpButton,
                     const SizedBox(
                       height: 20,

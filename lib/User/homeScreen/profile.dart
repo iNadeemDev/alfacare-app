@@ -1,6 +1,8 @@
 //import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:alfacare/User/homeScreen/home_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'userAppBar.dart';
 
@@ -12,8 +14,8 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  //final _auth = FirebaseAuth.instance;
-  //CollectionReference users = FirebaseFirestore.instance.collection('users');
+  final _auth = FirebaseAuth.instance;
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
 
   //form key
   final _profileformKey = GlobalKey<FormState>();
@@ -154,14 +156,14 @@ class _ProfileState extends State<Profile> {
       onPressed: () {
         //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Welcome()));
         // Validate returns true if the form is valid, or false otherwise.
-        // if (_profileformKey.currentState!.validate()) {
-        //   // If the form is valid, display a snackbar. In the real world,
-        //   // you'd often call a server or save the information in a database.
-        //   _profileformKey.currentState!.save();
-        //   //Testing the values, can be sent to API
+        if (_profileformKey.currentState!.validate()) {
+          // If the form is valid, display a snackbar. In the real world,
+          // you'd often call a server or save the information in a database.
+          _profileformKey.currentState!.save();
+          //Testing the values, can be sent to API
 
-        //   addUser(nameController.text, emailController.text,
-        //       phoneController.text, gender);
+          addUser(nameController.text, emailController.text,
+              phoneController.text, gender);
         //   print(nameController.text);
 
         //   ///print(_email);
@@ -174,7 +176,7 @@ class _ProfileState extends State<Profile> {
         //   ScaffoldMessenger.of(context).showSnackBar(
         //     const SnackBar(content: Text('Processing Data')),
         //   );
-        // }
+        }
       },
     );
 
@@ -274,16 +276,16 @@ class _ProfileState extends State<Profile> {
 
   // Adding new user to the database
 
-  // Future<void> addUser(name, email, phone, gender) {
-  //   // Call the user's CollectionReference to add a new user
-  //   return users
-  //       .add({
-  //         'name': name,
-  //         'email': email,
-  //         'phone': phone,
-  //         'gender': gender,
-  //       })
-  //       .then((value) => print("User Added"))
-  //       .catchError((error) => print("Failed to add user: $error"));
-  // }
+  Future<void> addUser(name, email, phone, gender) {
+    // Call the user's CollectionReference to add a new user
+    return users
+        .add({
+          'name': name,
+          'email': email,
+          'phone': phone,
+          'gender': gender,
+        })
+        .then((value) => print("User Added"))
+        .catchError((error) => print("Failed to add user: $error"));
+  }
 }

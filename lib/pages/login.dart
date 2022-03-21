@@ -1,7 +1,7 @@
 //import 'package:firebase_auth/firebase_auth.dart';
-import 'package:alfacare/User/HomeScreen/home_screen.dart';
 import 'package:alfacare/User/homeScreen/bottom_nav.dart';
 import 'package:alfacare/pages/signup.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 
 class Login extends StatefulWidget {
@@ -22,9 +22,48 @@ class _LoginState extends State<Login> {
 
   String? errorMessage;
 
-  String email = '';
 
-  String password = '';
+
+  userLogin() async {
+
+  final String email = emailController.text;
+
+  final String password = passwordController.text;
+    try {
+      await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: email, password: password);
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NavBar(),
+        ),
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print("No User Found for that Email");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.orangeAccent,
+            content: Text(
+              "No User Found for that Email",
+              style: TextStyle(fontSize: 18.0, color: Colors.black),
+            ),
+          ),
+        );
+      } else if (e.code == 'wrong-password') {
+        print("Wrong Password Provided by User");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.orangeAccent,
+            content: Text(
+              "Wrong Password Provided by User",
+              style: TextStyle(fontSize: 18.0, color: Colors.black),
+            ),
+          ),
+        );
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,8 +138,9 @@ class _LoginState extends State<Login> {
         //minWidth: MediaQuery.of(context).size.width,
         onPressed: () {
           //signIn(emailController.text, passwordController.text);
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => NavBar()));
+          userLogin();
+          // Navigator.pushReplacement(context,
+          //     MaterialPageRoute(builder: (context) => NavBar()));
         },
         child: const Text(
           'Sign In',
