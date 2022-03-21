@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Specialities()));
+                                    builder: (context) => City()));
                           },
                           child: Container(
                               padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
