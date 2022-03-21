@@ -32,12 +32,26 @@ class _LoginState extends State<Login> {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => NavBar(),
-        ),
-      );
+      User? user = FirebaseAuth.instance.currentUser;
+      if (!user!.emailVerified ) {
+        print("Email not verified");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.orangeAccent,
+            content: Text(
+              "Please, verify your email first",
+              style: TextStyle(fontSize: 18.0, color: Colors.black),
+            ),
+          ),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => NavBar(),
+          ),
+        );
+      }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print("No User Found for that Email");

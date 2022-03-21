@@ -53,12 +53,14 @@ class _SignUpState extends State<SignUp> {
       try {
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
+        User? user = FirebaseAuth.instance.currentUser;
+        await user!.sendEmailVerification();
         print(userCredential);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             backgroundColor: Colors.redAccent,
             content: Text(
-              "Registered Successfully. Please Login..",
+              "Email verification link has been sent.",
               style: TextStyle(fontSize: 20.0),
             ),
           ),
