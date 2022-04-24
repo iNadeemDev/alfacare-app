@@ -32,9 +32,9 @@ class _ProfileState extends State<Profile> {
     //name input field
     final nameField = TextFormField(
       controller: nameController,
-      decoration: const InputDecoration(
+      decoration:  InputDecoration(
           labelText: 'Name',
-          suffixIcon: Icon(Icons.person, color: Colors.pink)),
+          suffixIcon: Icon(Icons.person,   color: Colors.purple.shade900,)),
       //maxLength: 10,
       validator: (String? value) {
         if (value == null || value.isEmpty) {
@@ -52,11 +52,11 @@ class _ProfileState extends State<Profile> {
     final emailField = TextFormField(
       controller: emailController,
       keyboardType: TextInputType.emailAddress,
-      decoration: const InputDecoration(
+      decoration:  InputDecoration(
           labelText: 'Email',
           suffixIcon: Icon(
             Icons.mail,
-            color: Colors.pink,
+            color: Colors.purple.shade900,
           )),
       validator: (String? value) {
         /*if (value.isEmpty) {
@@ -84,9 +84,9 @@ class _ProfileState extends State<Profile> {
     final phoneField = TextFormField(
       controller: phoneController,
       keyboardType: TextInputType.number,
-      decoration: const InputDecoration(
+      decoration:  InputDecoration(
           labelText: 'Mobile',
-          suffixIcon: Icon(Icons.phone, color: Colors.pink)),
+          suffixIcon: Icon(Icons.phone, color: Colors.purple.shade900,)),
       //maxLength: 10,
       validator: (String? value) {
         if (value == null || value.isEmpty) {
@@ -113,9 +113,9 @@ class _ProfileState extends State<Profile> {
         ),
       ),
 
-      icon: const Icon(
+      icon:  Icon(
         Icons.arrow_downward,
-        color: Colors.pink,
+        color: Colors.purple.shade900,
         size: 30,
       ),
       elevation: 16,
@@ -152,7 +152,7 @@ class _ProfileState extends State<Profile> {
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
-                  side: const BorderSide(color: Colors.red)))),
+                  side:  BorderSide(   color: Colors.purple.shade900,)))),
       onPressed: () {
         //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Welcome()));
         // Validate returns true if the form is valid, or false otherwise.

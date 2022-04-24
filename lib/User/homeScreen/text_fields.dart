@@ -3,17 +3,22 @@ import 'package:sizer/sizer.dart';
 import 'package:flutter/services.dart';
 
 class TextBox extends StatefulWidget {
-  const TextBox({
+   TextBox({
     Key? key,
-    required this.title1,
-    required this.title2,
-    required this.controller1,
-    required this.controller2,
+     this.title1,
+    this.title2,
+     this.controller1,
+     this.controller2,
+      this.onChange,
+     this.onChange1,
+
   }) : super(key: key);
-  final String title1;
-  final String title2;
-  final TextEditingController controller1;
-  final TextEditingController controller2;
+  dynamic  title1;
+  dynamic  title2;
+   dynamic controller1;
+   dynamic controller2;
+    dynamic onChange;
+   dynamic onChange1;
   @override
   _TextBoxState createState() => _TextBoxState();
 }
@@ -63,14 +68,23 @@ class _TextBoxState extends State<TextBox> {
             children: [
               SizedBox(
                 width: 44.w,
-                child: TextFormField(
+                child: TextField(
                   controller: widget.controller1,
-                  validator: (String? value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter values';
-                    }
-                    return null;
-                  },
+                  // validator: (String? value) {
+                  //   if (value == null || value.isEmpty) {
+                  //     return 'Please enter values';
+                  //   }
+                  //   return null;
+                  // },
+                  // onChanged: ( value){
+                  //   widget.input1=value;
+                  //   print(widget.input1);
+                  //   // if (value == null || value.isEmpty) {
+                  //   //    return 'Please enter values';
+                  //   //    }
+                  //   //    return null;
+                  // },
+                  onChanged: widget.onChange,
                   obscureText: false,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -102,12 +116,21 @@ class _TextBoxState extends State<TextBox> {
                 width: 45.w,
                 child: TextFormField(
                   controller: widget.controller2,
-                  validator: (String? value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter values';
-                    }
-                    return null;
-                  },
+                  // validator: (String? value) {
+                  //   if (value == null || value.isEmpty) {
+                  //     return 'Please enter values';
+                  //   }
+                  //   return null;
+                  // },
+                  // onChanged: ( value){
+                  //   widget.input2=value;
+                  //   print(widget.input2);
+                  //   // if (value == null || value.isEmpty) {
+                  //   //    return 'Please enter values';
+                  //   //    }
+                  //   //    return null;
+                  // },
+                  onChanged: widget.onChange1,
                   obscureText: false,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
