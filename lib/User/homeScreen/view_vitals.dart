@@ -6,7 +6,6 @@ import 'package:sizer/sizer.dart';
 class ViewVitals extends StatelessWidget {
   final dynamic bp, pulse, temp, rsugar, weight, height, fsugar, breath, oxygen;
   ViewVitals({this.bp, this.temp, this.pulse, this.height, this.oxygen, this.weight, this.breath, this.fsugar, this.rsugar}) ;
-  AddVitals obj=AddVitals();
   @override
 
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class ViewVitals extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(left: 2.h,top: 3.h,right: 2.h,bottom: 26.h),
         child: Container(
-          height: 2.h,
+          height: 55.h,
           width: 20.w,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -42,7 +41,7 @@ class ViewVitals extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 21.5.h,top: 3.h,right: 3.h),
 
-                    child: Text(obj.Input1),
+                    child: Text('$bp'),
                   ),
                 ],
               ),
@@ -54,7 +53,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 25.4.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input2),
+                    child: Text('$pulse'),
                   ),
                 ],
               ),
@@ -66,7 +65,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 19.5.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input3),
+                    child: Text('$temp'),
                   ),
                 ],
               ),
@@ -78,7 +77,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 28.5.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input4),
+                    child: Text('$height'),
                   ),
                 ],
               ),
@@ -90,7 +89,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 28.25.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input5),
+                    child: Text('$weight'),
                   ),
                 ],
               ),Row(
@@ -101,7 +100,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 23.5.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input6),
+                    child: Text('$fsugar'),
                   ),
                 ],
               ),Row(
@@ -112,7 +111,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 23.5.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input7),
+                    child: Text('$rsugar'),
                   ),
                 ],
               ),Row(
@@ -123,7 +122,7 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 22.5.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input8),
+                    child: Text('$breath'),
                   ),
                 ],
               ),Row(
@@ -134,14 +133,10 @@ class ViewVitals extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 25.h,top: 3.h,right: 3.h),
-                    child: Text(obj.Input9),
+                    child: Text("$oxygen"),
                   ),
                 ],
               ),
-
-
-
-
             ],
           ),
         ),

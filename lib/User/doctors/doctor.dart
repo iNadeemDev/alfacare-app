@@ -20,7 +20,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       body: Column(
         children: [
           Container(
-            height: 230,
+            height: 22.h,
             width: 100.w,
             color: Colors.purple.shade900,
             child: Column(

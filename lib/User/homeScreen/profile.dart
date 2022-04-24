@@ -149,6 +149,7 @@ class _ProfileState extends State<Profile> {
         ),
       ),
       style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.purple.shade900),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
@@ -213,9 +214,9 @@ class _ProfileState extends State<Profile> {
                           .dstATop), //                                                 BlendMode.srcOver)
                 )),
                 child: Column(
-                  children: const [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 16, 0, 8),
+                  children:  [
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 16, 0, 8),
                       child: CircleAvatar(
                         backgroundImage: NetworkImage(
                             'https://thumbs.dreamstime.com/b/user-icon-vector-male-person-symbol-profile-circle-avatar-sign-user-icon-vector-male-person-symbol-profile-circle-avatar-sign-115922550.jpg'),
@@ -228,6 +229,7 @@ class _ProfileState extends State<Profile> {
                         'Mohammed Nadeem',
                         style: TextStyle(
                           fontSize: 18,
+                          color: Colors.purple.shade900,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5,
                         ),

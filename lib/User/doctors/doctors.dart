@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:sizer/sizer.dart';
 
 class Doctor extends StatefulWidget {
   const Doctor({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _DoctorState extends State<Doctor> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.purple.shade900,
       ),
       body: Container(
         color: Colors.white,
@@ -57,7 +58,7 @@ class _DoctorState extends State<Doctor> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                               text: 'Selected Category: ',
                               style:
                                   TextStyle(color: Colors.black, fontSize: 20),
@@ -65,7 +66,7 @@ class _DoctorState extends State<Doctor> {
                                 TextSpan(
                                     text: ' Cardiologist',
                                     style: TextStyle(
-                                        color: Colors.purple, fontSize: 20))
+                                        color: Colors.purple.shade900, fontSize: 20))
                               ]),
                         ),
                       ],
@@ -87,157 +88,160 @@ class _DoctorState extends State<Doctor> {
                                               builder: (context) =>
                                                   const DoctorProfile()));
                                     },
-                                    child: Container(
-                                      padding: const EdgeInsets.fromLTRB(
-                                          15, 5, 10, 15),
-                                      //margin: const EdgeInsets.all(10),
-                                      width: 340,
-                                      height: 150,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              ClipOval(
-                                                child: Image.asset(
-                                                  'assets/Ameer.jpg',
-                                                  width: 80,
-                                                  height: 80,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(10),
-                                            child: Column(
+                                    child: Padding(
+                                      padding:  EdgeInsets.only(left: 1.h,right: 1.h),
+                                      child: Container(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            18, 5, 10, 18),
+                                        //margin: const EdgeInsets.all(10),
+                                        width: 90.w,
+                                        height: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                  MainAxisAlignment.center,
                                               children: [
-                                                Row(
-                                                  children: const [
-                                                    Icon(
-                                                      Icons.circle_rounded,
-                                                      size: 8,
-                                                      color: Colors.green,
-                                                    ),
-                                                    SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Text(
-                                                      'Online',
-                                                      style: TextStyle(
-                                                          fontSize: 14,
-                                                          color: Colors.green),
-                                                    )
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: const [
-                                                    Text(
-                                                      'Dr Muhammad Ameer',
-                                                      style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: const [
-                                                    Text(
-                                                      'Cardiologist',
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: const [
-                                                    Text(
-                                                      '5 years of Experience',
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: const [
-                                                    Text(
-                                                      'MBBS, FCPS',
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                const SizedBox(
-                                                  height: 15,
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Column(
-                                                      children: [
-                                                        Row(
-                                                          children: [
-                                                            for (int i = 1;
-                                                                i <= 5;
-                                                                i++)
-                                                              Container(
-                                                                child:
-                                                                    const Icon(
-                                                                  Icons.star,
-                                                                  size: 15,
-                                                                  color: Colors
-                                                                      .yellow,
-                                                                ),
-                                                              )
-                                                          ],
-                                                        )
-                                                      ],
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 50,
-                                                    ),
-                                                    Column(
-                                                      children: const [
-                                                        Text(
-                                                          'Rs. 1500/-',
-                                                          style: TextStyle(
-                                                            fontSize: 13,
-                                                            color:
-                                                                Colors.purple,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    )
-                                                  ],
+                                                ClipOval(
+                                                  child: Image.asset(
+                                                    'assets/Ameer.jpg',
+                                                    width: 80,
+                                                    height: 80,
+                                                    fit: BoxFit.cover,
+                                                  ),
                                                 )
                                               ],
                                             ),
-                                          )
-                                        ],
+                                            const SizedBox(
+                                              width: 10,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(10),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Row(
+                                                    children: const [
+                                                      Icon(
+                                                        Icons.circle_rounded,
+                                                        size: 8,
+                                                        color: Colors.green,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      Text(
+                                                        'Online',
+                                                        style: TextStyle(
+                                                            fontSize: 14,
+                                                            color: Colors.green),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Text(
+                                                        'Dr Muhammad Ameer',
+                                                        style: TextStyle(
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Text(
+                                                        'Cardiologist',
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Text(
+                                                        '5 years of Experience',
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Text(
+                                                        'MBBS, FCPS',
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 15,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Column(
+                                                        children: [
+                                                          Row(
+                                                            children: [
+                                                              for (int i = 1;
+                                                                  i <= 5;
+                                                                  i++)
+                                                                Container(
+                                                                  child:
+                                                                      const Icon(
+                                                                    Icons.star,
+                                                                    size: 15,
+                                                                    color: Colors
+                                                                        .yellow,
+                                                                  ),
+                                                                )
+                                                            ],
+                                                          )
+                                                        ],
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 50,
+                                                      ),
+                                                      Column(
+                                                        children: const [
+                                                          Text(
+                                                            'Rs. 1500/-',
+                                                            style: TextStyle(
+                                                              fontSize: 13,
+                                                              color:
+                                                                  Colors.purple,
+                                                              fontWeight:
+                                                                  FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),

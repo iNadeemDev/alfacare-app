@@ -9,16 +9,12 @@ class TextBox extends StatefulWidget {
     this.title2,
      this.controller1,
      this.controller2,
-      this.onChange,
-     this.onChange1,
 
   }) : super(key: key);
   dynamic  title1;
   dynamic  title2;
    dynamic controller1;
    dynamic controller2;
-    dynamic onChange;
-   dynamic onChange1;
   @override
   _TextBoxState createState() => _TextBoxState();
 }
@@ -68,23 +64,13 @@ class _TextBoxState extends State<TextBox> {
             children: [
               SizedBox(
                 width: 44.w,
-                child: TextField(
-                  controller: widget.controller1,
-                  // validator: (String? value) {
-                  //   if (value == null || value.isEmpty) {
-                  //     return 'Please enter values';
-                  //   }
-                  //   return null;
-                  // },
-                  // onChanged: ( value){
-                  //   widget.input1=value;
-                  //   print(widget.input1);
-                  //   // if (value == null || value.isEmpty) {
-                  //   //    return 'Please enter values';
-                  //   //    }
-                  //   //    return null;
-                  // },
-                  onChanged: widget.onChange,
+                child: TextFormField(
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter values';
+                    }
+                    return null;
+                  },
                   obscureText: false,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -116,21 +102,12 @@ class _TextBoxState extends State<TextBox> {
                 width: 45.w,
                 child: TextFormField(
                   controller: widget.controller2,
-                  // validator: (String? value) {
-                  //   if (value == null || value.isEmpty) {
-                  //     return 'Please enter values';
-                  //   }
-                  //   return null;
-                  // },
-                  // onChanged: ( value){
-                  //   widget.input2=value;
-                  //   print(widget.input2);
-                  //   // if (value == null || value.isEmpty) {
-                  //   //    return 'Please enter values';
-                  //   //    }
-                  //   //    return null;
-                  // },
-                  onChanged: widget.onChange1,
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter values';
+                    }
+                    return null;
+                  },
                   obscureText: false,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(

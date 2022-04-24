@@ -12,6 +12,7 @@ import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'bottom_navbar.dart';
+import 'my_vitals.dart';
 
 /// This Widget is the main application widget.
 class HomeScreen extends StatefulWidget {
@@ -204,19 +205,19 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 45.w,
                               child: Column(
                                 children:  [
-                                  Icon(FontAwesomeIcons.flask,
+                                  Icon(FontAwesomeIcons.mobile,
                                     color: Colors.purple.shade900,
                                       size: 35.0),
                                   SizedBox(height: 1.h),
                                   const Text(
-                                    'doctor',
+                                    'Doctor',
                                     style: TextStyle(
                                       fontSize: 14,
                                     ),
                                   ),
                                   SizedBox(height: 1.h),
                                   const Text(
-                                    'Lab Test',
+                                    'On Call',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
@@ -247,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 45.w,
                               child: Column(
                                 children:  [
-                                  Icon(FontAwesomeIcons.flask,
+                                  Icon(FontAwesomeIcons.mobile,
                                     color: Colors.purple.shade900,
                                       size: 35.0),
                                   SizedBox(height: 1.h),
@@ -306,33 +307,41 @@ class _HomeScreenState extends State<HomeScreen> {
                   //     ],
                   //   ),
                   // ),
-                  SizedBox(
-                    height: 14.h,
-                    child: Card(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(9)),
-                      margin: EdgeInsets.all(4.w),
-                      child: ListTile(
-                        leading: Icon(FontAwesomeIcons.upload,
-                            color: Colors.purple.shade900,  size: 35.0),
-                        title: const Text(
-                          'Upload',
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            color: Colors.black,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyVitals()));
+                    },
+                    child: SizedBox(
+                      height: 14.h,
+                      child: Card(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(9)),
+                        margin: EdgeInsets.all(4.w),
+                        child: ListTile(
+                          leading: Icon(FontAwesomeIcons.upload,
+                              color: Colors.purple.shade900,  size: 35.0),
+                          title: const Text(
+                            'View',
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                        subtitle: const Text(
-                          'Prescription',
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
+                          subtitle: const Text(
+                            'MY Vitals',
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
+                          trailing: const Icon(FontAwesomeIcons.arrowRight,
+                              color: Colors.black, size: 28.0),
                         ),
-                        trailing: const Icon(FontAwesomeIcons.arrowRight,
-                            color: Colors.black, size: 28.0),
                       ),
                     ),
                   ),

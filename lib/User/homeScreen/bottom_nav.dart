@@ -2,7 +2,6 @@ import 'package:alfacare/User/homeScreen/profile.dart';
 import 'package:flutter/material.dart';
 import 'fourth_class.dart';
 import '../doctors/doctor.dart';
-import './third_class.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -43,7 +42,7 @@ class NavBar extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       const HomeScreen(),
-      const ThirdClass(),
+      // const ThirdClass(),
       const FourthClass(),
       const Profile(),
     ];
@@ -57,11 +56,11 @@ class NavBar extends StatelessWidget {
         activeColorPrimary: Colors.pinkAccent,
         inactiveColorPrimary: Colors.purple.shade900,
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.shopping_cart),
-        activeColorPrimary: Colors.pinkAccent,
-        inactiveColorPrimary: Colors.purple.shade900,
-      ),
+      // PersistentBottomNavBarItem(
+      //   icon: const Icon(Icons.shopping_cart),
+      //   activeColorPrimary: Colors.pinkAccent,
+      //   inactiveColorPrimary: Colors.purple.shade900,
+      // ),
       PersistentBottomNavBarItem(
         icon: const Icon(FontAwesomeIcons.bell),
         activeColorPrimary: Colors.pinkAccent,

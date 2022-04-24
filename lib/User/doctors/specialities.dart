@@ -2,6 +2,7 @@ import 'package:alfacare/User/doctors/doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'search.dart';
+import 'package:sizer/sizer.dart';
 
 
 class Specialities extends StatefulWidget {
@@ -81,7 +82,7 @@ class _SpecialitiesState extends State<Specialities> {
                     ),
                     Text("Search For a Doctor Here"),
                     SizedBox(
-                      width: 100.0,
+                      width: 150.0,
                     ),
                     IconButton(
                       onPressed: () =>
@@ -102,15 +103,15 @@ class _SpecialitiesState extends State<Specialities> {
                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Doctor()));
                         },
                         child: Container(
-                          decoration: BoxDecoration(
-                            boxShadow: const [
+                          decoration: const BoxDecoration(
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 0.15,
                                 color: Colors.black12,
                               )
                             ],
                           ),
-                          width: 340,
+                          width: 390,
                           height: 65,
                           padding: new EdgeInsets.all(1.0),
                           margin: EdgeInsets.only(
@@ -139,35 +140,38 @@ class _SpecialitiesState extends State<Specialities> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10.0,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.purple[900],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10.0,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[900],
+                                      ),
                                     ),
-                                  ),
-                                  Text('Cardiologist'),
-                                ],
+                                    Text('Cardiologist'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -195,35 +199,38 @@ class _SpecialitiesState extends State<Specialities> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: const EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.orange[300],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.orange[300],
+                                      ),
                                     ),
-                                  ),
-                                  Text('ENT Specialist'),
-                                ],
+                                    Text('ENT Specialist'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -251,35 +258,38 @@ class _SpecialitiesState extends State<Specialities> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.purple[100],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[100],
+                                      ),
                                     ),
-                                  ),
-                                  Text('Endocrinologist'),
-                                ],
+                                    Text('Endocrinologist'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -307,35 +317,38 @@ class _SpecialitiesState extends State<Specialities> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.blue[600],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.blue[600],
+                                      ),
                                     ),
-                                  ),
-                                  Text('Eye Spcialist'),
-                                ],
+                                    Text('Eye Spcialist'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -363,95 +376,38 @@ class _SpecialitiesState extends State<Specialities> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.purple[600],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[600],
+                                      ),
                                     ),
-                                  ),
-                                  Text('Family Physician'),
-                                ],
+                                    Text('Family Physician'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(top: 2.0, left: 0.0),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.green[200],
-                                    ),
-                                  ),
-                                  Text('Heart Surgeon'),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-
-
-
-                      Row(
-                        children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.purple[600],
-                                    ),
-                                  ),
-                                  Text('Family Physician'),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -478,42 +434,40 @@ class _SpecialitiesState extends State<Specialities> {
                         ],
                       ),
 
-
-
-
-
-
                       Row(
                         children: [
-                          Container(
-                            width: 180,
-                            height: 75,
-                            padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
                               ),
-                              color: Colors.white,
-                              elevation: 10,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {/* ... */},
-                                    icon: Icon(
-                                      Icons.medication,
-                                      color: Colors.purple[600],
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[600],
+                                      ),
                                     ),
-                                  ),
-                                  Text('Family Physician'),
-                                ],
+                                    Text('Family Physician'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),
@@ -540,19 +494,43 @@ class _SpecialitiesState extends State<Specialities> {
                         ],
                       ),
 
-
-
-
-
                       Row(
                         children: [
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
+                              ),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[600],
+                                      ),
+                                    ),
+                                    Text('Family Physician'),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
-                            margin: EdgeInsets.only(
-                              top: 2.0,
-                            ),
+                            margin: EdgeInsets.only(top: 2.0, left: 0.0),
                             child: Card(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15.0),
@@ -565,16 +543,51 @@ class _SpecialitiesState extends State<Specialities> {
                                     onPressed: () {/* ... */},
                                     icon: Icon(
                                       Icons.medication,
-                                      color: Colors.purple[600],
+                                      color: Colors.green[200],
                                     ),
                                   ),
-                                  Text('Family Physician'),
+                                  Text('Heart Surgeon'),
                                 ],
                               ),
                             ),
                           ),
+                        ],
+                      ),
+
+                      Row(
+                        children: [
+                          Padding(
+                            padding:  EdgeInsets.only(left: 1.h),
+                            child: Container(
+                              width: 200,
+                              height: 75,
+                              padding: new EdgeInsets.all(7.0),
+                              margin: EdgeInsets.only(
+                                top: 2.0,
+                              ),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                color: Colors.white,
+                                elevation: 10,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {/* ... */},
+                                      icon: Icon(
+                                        Icons.medication,
+                                        color: Colors.purple[600],
+                                      ),
+                                    ),
+                                    Text('Family Physician'),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                           Container(
-                            width: 180,
+                            width: 200,
                             height: 75,
                             padding: new EdgeInsets.all(7.0),
                             margin: EdgeInsets.only(top: 2.0, left: 0.0),

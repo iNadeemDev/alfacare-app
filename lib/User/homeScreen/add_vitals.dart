@@ -6,16 +6,6 @@ import 'package:sizer/sizer.dart';
 import 'package:flutter/services.dart';
 
 class AddVitals extends StatefulWidget {
-  AddVitals({Key, key ,this.Input1, this.Input2, this.Input3, this.Input4, this.Input5, this.Input6, this.Input7, this.Input8, this.Input9 }) : super(key: key);
-  dynamic  Input1="";
-  dynamic  Input2="";
-  dynamic  Input3="";
- dynamic  Input4="";
-  dynamic  Input5="";
-  dynamic  Input6="";
- dynamic  Input7="";
- dynamic  Input8="";
-  dynamic  Input9="";
 
   @override
   State<AddVitals> createState() => _AddVitalsState();
@@ -77,36 +67,18 @@ class _AddVitalsState extends State<AddVitals> {
               controller2: pulse,
               title1: 'Blood Pressure',
               title2: '    Pulse Rate',
-              onChange: (value){
-                widget.Input1=value;
-              },
-              onChange1: (value){
-                widget.Input2=value;
-              },
             ),
             TextBox(
               controller1: temp,
               controller2: rSugar,
               title1: 'Temperature ',
               title2: '       Random sugar',
-              onChange: (value){
-               widget.Input3=value;
-              },
-              onChange1: (value){
-                widget.Input4=value;
-              },
             ),
             TextBox(
               controller1: weight,
               controller2: height,
               title1: 'Weight (in kg)',
               title2: '      Height (ft)',
-              onChange: (value){
-                widget.Input5=value;
-              },
-              onChange1: (value){
-                widget.Input6=value;
-              },
             ),
 
             TextBox(
@@ -114,12 +86,6 @@ class _AddVitalsState extends State<AddVitals> {
               controller2: breathing,
               title1: 'Fasting sugar',
               title2: '       Breathing rate',
-              onChange: (value){
-                widget.Input7=value;
-              },
-              onChange1: (value){
-                widget.Input8=value;
-              },
             ),
             SizedBox(
               height: 2.h,
@@ -148,15 +114,13 @@ class _AddVitalsState extends State<AddVitals> {
                     width: 100.w,
                     child: TextFormField(
                       controller: oxygen,
-                      // validator: (String? value) {
-                      //   if (value == null || value.isEmpty) {
-                      //     return 'Please enter text';
-                      //   }
-                      //   return null;
-                      // },
-                      onChanged: (value){
-                        widget.Input9=value;
+                      validator: (String? value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter text';
+                        }
+                        return null;
                       },
+
                       obscureText: false,
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
