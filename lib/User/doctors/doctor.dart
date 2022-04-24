@@ -206,11 +206,11 @@ class _DoctorProfileState extends State<DoctorProfile> {
           ),
           Container(
             child: Column(
-              children: const <Widget>[
-                Padding(
+              children: <Widget>[
+                const Padding(
                   padding: EdgeInsets.only(
-                    left: 14.0,
-                    right: 14.0,
+                    left: 18.0,
+                    right: 18.0,
                   ),
                   child: SizedBox(
                     width: double.infinity,
@@ -225,10 +225,13 @@ class _DoctorProfileState extends State<DoctorProfile> {
                     ),
                   ),
                 ),
-                Padding(
+                SizedBox(
+                  height: 0.5.h,
+                ),
+                const Padding(
                   padding: EdgeInsets.only(
-                    left: 14.0,
-                    right: 14.0,
+                    left: 18.0,
+                    right: 18.0,
                   ),
                   child: SizedBox(
                     width: double.infinity,
@@ -236,20 +239,20 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       '04:00 PM-09:00 PM',
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 13,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 13,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(
-                    left: 14.0,
-                    right: 14.0,
+                    left: 18.0,
+                    right: 18.0,
                   ),
                   child: SizedBox(
                     width: double.infinity,
@@ -264,10 +267,13 @@ class _DoctorProfileState extends State<DoctorProfile> {
                     ),
                   ),
                 ),
-                Padding(
+                SizedBox(
+                  height: 0.5.h,
+                ),
+                const Padding(
                   padding: EdgeInsets.only(
-                    left: 14.0,
-                    right: 14.0,
+                    left: 18.0,
+                    right: 18.0,
                   ),
                   child: SizedBox(
                     width: double.infinity,
@@ -275,7 +281,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       'Dr. RajaMehdi is a senior consultant cardiologist at Benazir Bhutto Hospital. He has more than 30 years of work experience as a cardiologist at renowned hospitals.',
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 13,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),

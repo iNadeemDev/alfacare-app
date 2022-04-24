@@ -1,4 +1,5 @@
-import 'package:alfacare/User/homeScreen/profile.dart';
+import 'package:alfacare/User/about-us.dart';
+import 'package:alfacare/User/homeScreen/my_vitals.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -16,7 +17,8 @@ class DrawerClass extends StatelessWidget {
               padding: EdgeInsets.zero,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      fit: BoxFit.fill, image: AssetImage('assets/img3.jpg'))),
+                      fit: BoxFit.fill,
+                      image:  AssetImage('assets/img3.jpg'))),
               child: Stack(children: <Widget>[
                 Positioned(
                     bottom: 12.0,
@@ -31,33 +33,38 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.fileMedical,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'My Health Record',
+                  child: Text('My Vitals',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ),),
                 )
               ],
             ),
-            // onTap: onTap,
+            onTap: (){
+              Navigator.of(context).pop();
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyVitals()),
+              );
+            },
           ),
           ListTile(
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.calendarCheck,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Appointments',
+                  child: Text('Appointments',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ),),
                 )
               ],
             ),
@@ -67,27 +74,32 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.infoCircle,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'About us',
+                  child: Text('About us',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ),),
                 )
               ],
             ),
-            // onTap: onTap,
+            onTap: (){
+              Navigator.of(context).pop();
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const about_us()),
+              );
+            },
           ),
+
           const ListTile(
-            title: Text(
-              "Shop by Categories",
+            title: Text("Shop by Categories",
               style: TextStyle(
-                fontSize: 18.0,
-              ),
-            ),
+                fontSize:  18.0,
+              ),),
           ),
           const Divider(
             height: 0.1,
@@ -96,15 +108,14 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.pills,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Stomach ache',
+                  child: Text('Stomach ache',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ), ),
                 )
               ],
             ),
@@ -114,13 +125,13 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.thermometer,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Fever',
+                  child: Text('Fever',
                     style: TextStyle(
-                      fontSize: 16.0,
+                      fontSize:  16.0,
                     ),
                   ),
                 )
@@ -132,15 +143,14 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.headSideCough,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Cough and Cold',
+                  child: Text('Cough and Cold',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ),),
                 )
               ],
             ),
@@ -150,15 +160,14 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.pills,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Head ache',
+                  child: Text('Head ache',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ), ),
                 )
               ],
             ),
@@ -168,15 +177,14 @@ class DrawerClass extends StatelessWidget {
             title: Row(
               children: <Widget>[
                 Icon(FontAwesomeIcons.virus,
-                    color: Colors.purple.shade900, size: 30.0),
+                    color: Colors.purple.shade900,
+                    size: 30.0),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Viral',
+                  child: Text('Viral',
                     style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
+                      fontSize:  16.0,
+                    ),),
                 )
               ],
             ),
@@ -185,29 +193,23 @@ class DrawerClass extends StatelessWidget {
           const Divider(
             height: 0.1,
           ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile()));
-            },
-            child: ListTile(
-              title: Row(
-                children: <Widget>[
-                  Icon(FontAwesomeIcons.ellipsisH,
-                      color: Colors.purple.shade900, size: 30.0),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'Other Categories',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                      ),
+          ListTile(
+            title: Row(
+              children: <Widget>[
+                Icon(FontAwesomeIcons.ellipsisH,
+                    color: Colors.purple.shade900,
+                    size: 30.0),
+                const Padding(
+                  padding: EdgeInsets.only(left: 20.0),
+                  child: Text('Other Categories',
+                    style: TextStyle(
+                      fontSize:  16.0,
                     ),
-                  )
-                ],
-              ),
-              // onTap: onTap,
+                  ),
+                )
+              ],
             ),
+            // onTap: onTap,
           ),
           const Divider(
             height: 0.1,

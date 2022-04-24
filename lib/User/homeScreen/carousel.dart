@@ -17,7 +17,7 @@ class CarouselCLass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 21.h,
+      height: 24.h,
       width: 100.w,
       child: CarouselSlider(
         items: imgList

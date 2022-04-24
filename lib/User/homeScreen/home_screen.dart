@@ -69,10 +69,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   SizedBox(
-                    height: 3.h,
+                    height: 2.h,
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                    padding: EdgeInsets.only(left: 2.w, right: 2.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -84,30 +84,36 @@ class _HomeScreenState extends State<HomeScreen> {
                                     builder: (context) => City()));
                           },
                           child: Container(
-                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                              margin: new EdgeInsets.only(left: 0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 color: Colors.white,
                               ),
+                              height: 20.h,
+                              width: 45.w,
                               child: Column(
-                                children: [
-                                  Icon(FontAwesomeIcons.flask),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    'Home',
+                                children:  [
+                                  Icon(FontAwesomeIcons.hospitalUser,
+                                    color: Colors.purple.shade900,
+                                      size: 35.0),
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'Home Hospital',
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                     ),
                                   ),
-                                  Text(
-                                    'Hospital',
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'Services',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 19,
+                                      fontSize: 14,
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: 1.h,
                                   ),
                                   Icon(FontAwesomeIcons.arrowRight),
                                 ],
@@ -121,30 +127,36 @@ class _HomeScreenState extends State<HomeScreen> {
                                     builder: (context) => Specialities()));
                           },
                           child: Container(
-                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                              margin: new EdgeInsets.only(left: 0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 color: Colors.white,
                               ),
+                              height: 20.h,
+                              width: 45.w,
                               child: Column(
-                                children: [
-                                  Icon(FontAwesomeIcons.flask),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    'Online',
+                                children:  [
+                                  Icon(FontAwesomeIcons.mobile,
+                                    color: Colors.purple.shade900,
+                                      size: 35.0),
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'Doctor',
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                     ),
                                   ),
-                                  Text(
-                                    'Lab Test',
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'On Call',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 19,
+                                      fontSize: 14,
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: 1.h,
                                   ),
                                   Icon(FontAwesomeIcons.arrowRight),
                                 ],
@@ -165,12 +177,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
 
                   Container(
-                    padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                    padding: EdgeInsets.only(left: 2.w, right: 2.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -182,30 +194,36 @@ class _HomeScreenState extends State<HomeScreen> {
                                     builder: (context) => Specialities()));
                           },
                           child: Container(
-                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                              margin: new EdgeInsets.only(left: 0),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
+                                borderRadius: BorderRadius.circular(8),
                                 color: Colors.white,
                               ),
+                              height: 20.h,
+                              width: 45.w,
                               child: Column(
-                                children: [
-                                  Icon(FontAwesomeIcons.flask),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    'Online',
+                                children:  [
+                                  Icon(FontAwesomeIcons.flask,
+                                    color: Colors.purple.shade900,
+                                      size: 35.0),
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'doctor',
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                     ),
                                   ),
-                                  Text(
+                                  SizedBox(height: 1.h),
+                                  const Text(
                                     'Lab Test',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 19,
+                                      fontSize: 14,
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: 1.h,
                                   ),
                                   Icon(FontAwesomeIcons.arrowRight),
                                 ],
@@ -219,30 +237,36 @@ class _HomeScreenState extends State<HomeScreen> {
                                     builder: (context) => Specialities()));
                           },
                           child: Container(
-                              padding: EdgeInsets.fromLTRB(35, 20, 40, 35),
+                              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                              margin: new EdgeInsets.only(left: 0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 color: Colors.white,
                               ),
+                              height: 20.h,
+                              width: 45.w,
                               child: Column(
-                                children: [
-                                  Icon(FontAwesomeIcons.flask),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    'Online',
+                                children:  [
+                                  Icon(FontAwesomeIcons.flask,
+                                    color: Colors.purple.shade900,
+                                      size: 35.0),
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'Doctor',
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                     ),
                                   ),
-                                  Text(
-                                    'Lab Test',
+                                  SizedBox(height: 1.h),
+                                  const Text(
+                                    'On Call',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 19,
+                                      fontSize: 14,
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: 1.h,
                                   ),
                                   Icon(FontAwesomeIcons.arrowRight),
                                 ],
@@ -282,11 +306,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   //     ],
                   //   ),
                   // ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 3.w,
-                      right: 3.w,
-                    ),
+                  SizedBox(
+                    height: 14.h,
                     child: Card(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -294,18 +315,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       margin: EdgeInsets.all(4.w),
                       child: ListTile(
                         leading: Icon(FontAwesomeIcons.upload,
-                            color: Colors.purple.shade900, size: 35.0),
+                            color: Colors.purple.shade900,  size: 35.0),
                         title: const Text(
                           'Upload',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 14.0,
                             color: Colors.black,
                           ),
                         ),
                         subtitle: const Text(
                           'Prescription',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 15.0,
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
@@ -318,13 +339,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ]),
           ),
         ),
+
         //bottomNavigationBar: Bottom_Navbar(),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: Container(
+          height:50.0,
+          width: 50.0,
+          child:FittedBox(
+          child:FloatingActionButton(
           onPressed: () {
             launch('tel://+923123456789');
           },
           backgroundColor: Colors.purple[900],
-          child: const Icon(Icons.phone),
+          child: const Icon(Icons.phone,
+          size: 29.0,),
+        ),
+      ),
         ),
       );
     });

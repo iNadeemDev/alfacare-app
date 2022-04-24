@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'doctors/doctors.dart';
+import 'homeScreen/home_screen.dart';
 import 'video.dart';
-import 'package:new_app/main.dart';
 import 'Terms.dart' ;
 import 'Policy.dart';
 
-void main() => runApp( const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: about_us(),
-    ));
+// void main() => runApp( const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: about_us(),
+//     ));
 
 class about_us extends StatefulWidget {
   const about_us({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _State extends State {
             color: Colors.white,
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Find_Doctor()));
+                  context, MaterialPageRoute(builder: (context) => const HomeScreen()));
             }),
         actions: [
           IconButton(
