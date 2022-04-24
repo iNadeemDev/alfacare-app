@@ -66,26 +66,26 @@ class _AddVitalsState extends State<AddVitals> {
               controller1: bP,
               controller2: pulse,
               title1: 'Blood Pressure',
-              title2: 'Pulse Rate',
+              title2: '    Pulse Rate',
             ),
             TextBox(
               controller1: temp,
               controller2: rSugar,
               title1: 'Temperature ',
-              title2: 'Random sugar',
+              title2: '       Random sugar',
             ),
             TextBox(
               controller1: weight,
               controller2: height,
               title1: 'Weight (in kg)',
-              title2: 'Height (ft)',
+              title2: '      Height (ft)',
             ),
 
             TextBox(
               controller1: fSugar,
               controller2: breathing,
               title1: 'Fasting sugar',
-              title2: 'Breathing rate',
+              title2: '       Breathing rate',
             ),
             SizedBox(
               height: 2.h,
@@ -95,7 +95,7 @@ class _AddVitalsState extends State<AddVitals> {
               children: [
                 Padding(
                   // padding: EdgeInsets.only(left: 4.w),
-                  padding: EdgeInsets.only(left:1.h,right: 1.h,top: 4.h,),
+                  padding: EdgeInsets.only(left:1.h,right: 1.h,top: 2.h,),
                   child: Text(
                     'Blood oxygen Saturation level',
                     style: TextStyle(
@@ -150,46 +150,50 @@ class _AddVitalsState extends State<AddVitals> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget> [
-                // Container(
-                //     padding: EdgeInsets.only(left: 36.w, top: 3.h),
-                FlatButton(
-                  color: Colors.purple.shade900,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.w)),
-                  onPressed: (){
-                    print('Blood Pressure: ${bP.text}');
-                    print('Number: ${pulse.text}');
-                    print('Number: ${temp.text}');
-                    print('Number: ${rSugar.text}');
-                    print('Number: ${weight.text}');
-                    print('Number: ${height.text}');
-                    print('Number: ${fSugar.text}');
-                    print('Number: ${breathing.text}');
-                    print('Number: ${oxygen.text}');
-                  } ,
-                  child: const Text('Add Vitals',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  // FlatButton(
-                  //   onPressed: () {
-                  //     setState(() {
-                  //       isUpdating = false;
-                  //     });
-                  //     print('Blood Pressure: ${bP.text}');
-                  //     print('Number: ${pulse.text}');
-                  //     print('Number: ${temp.text}');
-                  //     print('Number: ${rSugar.text}');
-                  //     print('Number: ${weight.text}');
-                  //     print('Number: ${height.text}');
-                  //     print('Number: ${fSugar.text}');
-                  //     print('Number: ${breathing.text}');
-                  //     print('Number: ${oxygen.text}');
-                  //     if (_formKey.currentState!.validate()) {
-                  //       _formKey.currentState!.save();
-                  //     }
-                  //   }, child: Text('Cancel'),
-                  // ),
+                Padding(
+                  padding: EdgeInsets.only(top: 2.h),
+                  child: FlatButton(
+                    color: Colors.purple.shade900,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.w)),
+                    onPressed: (){
+                          if (_formKey.currentState!.validate()) {
+                             _formKey.currentState!.save();
+                       }
+                      print('Blood Pressure: ${bP.text}');
+                      print('Pulse rate: ${pulse.text}');
+                      print('Temperature: ${temp.text}');
+                      print('Random sugar: ${rSugar.text}');
+                      print('Weight: ${weight.text}');
+                      print('Height: ${height.text}');
+                      print('Fasting suagr: ${fSugar.text}');
+                      print('Breathing rate: ${breathing.text}');
+                      print('Oxygen: ${oxygen.text}');
+                    } ,
+                    child: const Text('Add Vitals',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    // FlatButton(
+                    //   onPressed: () {
+                    //     setState(() {
+                    //       isUpdating = false;
+                    //     });
+                    //     print('Blood Pressure: ${bP.text}');
+                    //     print('Number: ${pulse.text}');
+                    //     print('Number: ${temp.text}');
+                    //     print('Number: ${rSugar.text}');
+                    //     print('Number: ${weight.text}');
+                    //     print('Number: ${height.text}');
+                    //     print('Number: ${fSugar.text}');
+                    //     print('Number: ${breathing.text}');
+                    //     print('Number: ${oxygen.text}');
+                    //     if (_formKey.currentState!.validate()) {
+                    //       _formKey.currentState!.save();
+                    //     }
+                    //   }, child: Text('Cancel'),
+                    // ),
 
+                  ),
                 ),
                 // ),
               ],

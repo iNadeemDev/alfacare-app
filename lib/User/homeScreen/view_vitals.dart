@@ -5,6 +5,8 @@ class ViewVitals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Container(child: Text("View Vitals", style: TextStyle(fontSize: 24),),));;
+    return Center(
+        child: Container
+          (child: Text("View Vitals", style: TextStyle(fontSize: 24),),));;
   }
 }

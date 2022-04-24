@@ -24,7 +24,7 @@ class _TextBoxState extends State<TextBox> {
   Widget build(BuildContext context) {
     return Padding(
       key: _formKey,
-      padding: EdgeInsets.only(left:1.h,right: 1.h,top: 4.h,),
+      padding: EdgeInsets.only(left:1.h,right: 1.h,top: 3.h,),
       child: Column(
         children: [
           Padding(

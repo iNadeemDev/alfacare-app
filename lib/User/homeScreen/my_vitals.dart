@@ -13,7 +13,7 @@ class MyVitals extends StatelessWidget {
         length: 2,
         initialIndex: 0,
         child: Scaffold(
-          appBar: AppBar(title: const Center(child: Text("My Vitals")),
+          appBar: AppBar(title: Center(child: Text("My Vitals")),
             backgroundColor: Colors.purple.shade900,
           ),
           backgroundColor: Colors.blue.shade50,
